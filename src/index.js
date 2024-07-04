@@ -15,7 +15,7 @@ const routes = {
   "ghcr.proxy.flyqie.com": "https://ghcr.io",
   "cloudsmith.proxy.flyqie.com": "https://docker.cloudsmith.io",
   "ecr.proxy.flyqie.com": "https://public.ecr.aws",
-  "ghraw.proxy.flyqie.com": "https://raw.githubusercontent.com",
+  // "ghraw.proxy.flyqie.com": "https://raw.githubusercontent.com",
 
   // staging
   "docker-staging.proxy.flyqie.com": dockerHub,
