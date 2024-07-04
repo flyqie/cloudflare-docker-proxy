@@ -7,15 +7,15 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  "docker.proxy.flyqie.com": dockerHub,
-  "quay.proxy.flyqie.com": "https://quay.io",
-  "gcr.proxy.flyqie.com": "https://gcr.io",
-  "k8s-gcr.proxy.flyqie.com": "https://k8s.gcr.io",
-  "k8s.proxy.flyqie.com": "https://registry.k8s.io",
-  "ghcr.proxy.flyqie.com": "https://ghcr.io",
-  "cloudsmith.proxy.flyqie.com": "https://docker.cloudsmith.io",
-  "ecr.proxy.flyqie.com": "https://public.ecr.aws",
-  // "ghraw.proxy.flyqie.com": "https://raw.githubusercontent.com",
+  "docker-proxy.flyqie.com": dockerHub,
+  "quay-proxy.flyqie.com": "https://quay.io",
+  "gcr-proxy.flyqie.com": "https://gcr.io",
+  "k8s-gcr-proxy.flyqie.com": "https://k8s.gcr.io",
+  "k8s-proxy.flyqie.com": "https://registry.k8s.io",
+  "ghcr-proxy.flyqie.com": "https://ghcr.io",
+  "cloudsmith-proxy.flyqie.com": "https://docker.cloudsmith.io",
+  "ecr-proxy.flyqie.com": "https://public.ecr.aws",
+  // "ghraw-proxy.flyqie.com": "https://raw.githubusercontent.com",
 
   // staging
   "docker-staging.proxy.flyqie.com": dockerHub,
