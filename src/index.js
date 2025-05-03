@@ -20,7 +20,7 @@ const routes = {
   ["gistraw." + CUSTOM_DOMAIN]: "https://gist.githubusercontent.com",
 
   // staging
-  ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
+  //["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
 };
 
 function routeByHosts(host) {
