@@ -23,12 +23,6 @@ const routes = {
   //["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
 };
 
-const dmcaIndexRoutes = [
-  "gh." + CUSTOM_DOMAIN,
-  "ghraw." + CUSTOM_DOMAIN,
-  "gistraw." + CUSTOM_DOMAIN,
-];
-
 function routeByHosts(host) {
   if (host in routes) {
     return routes[host];
@@ -52,11 +46,11 @@ async function handleRequest(request) {
       }
     );
   }
-  if (dmcaIndexRoutes.includes(url.hostname) && url.pathname == "/") {
+  if (url.pathname == "/") {
     return new Response(
-      "Hello, world!",
+      "",
       {
-        status: 404,
+        status: 200,
       }
     );
   }
