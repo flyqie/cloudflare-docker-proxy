@@ -46,6 +46,7 @@ async function handleRequest(request) {
       }
     );
   }
+  // DMCA
   if (url.pathname == "/") {
     return new Response(
       "",
