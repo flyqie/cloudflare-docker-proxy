@@ -55,6 +55,33 @@ async function handleRequest(request) {
       }
     );
   }
+  // git
+  if (url.pathname.endsWith(".git/info/refs") && url.searchParams.has("service")) {
+    const resp = await fetch((new URL(upstream + url.pathname + url.search)).toString(), {
+      method: "GET",
+      headers: (new Headers(request.headers)),
+      redirect: "manual",
+    });
+    return new Response(resp.body, {
+      status: resp.status,
+      statusText: resp.statusText,
+      headers: resp.headers,
+    });
+  }
+  if (url.pathname.endsWith("/git-upload-pack") || url.pathname.endsWith("/git-receive-pack")) {
+    const resp = await fetch(new Request((new URL(upstream + url.pathname + url.search)).toString(), {
+      method: request.method,
+      headers: (new Headers(request.headers)),
+      body: request.body,
+      redirect: "manual",
+    }));
+    return new Response(resp.body, {
+      status: resp.status,
+      statusText: resp.statusText,
+      headers: resp.headers,
+    });
+  }
+  // Docker
   const isDockerHub = upstream == dockerHub;
   const authorization = request.headers.get("Authorization");
   if (url.pathname == "/v2/") {
